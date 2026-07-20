@@ -119,6 +119,8 @@ section { padding: 64px 0; }
 .review__stars { color: var(--rust); letter-spacing: 2px; margin-bottom: 8px; }
 .review p { color: var(--ink); font-style: italic; }
 .review__meta { color: var(--muted); font-size: .85rem; font-style: normal; }
+.review__job { color: var(--ink); font-weight: 700; font-style: normal; font-family: var(--font-head); font-size: .9rem; margin-bottom: 6px; }
+.reviews__more { text-align: center; margin-top: 32px; }
 
 .about__grid { display: grid; gap: 28px; align-items: center; }
 @media (min-width: 860px) { .about__grid { grid-template-columns: 1.1fr .9fr; } }
