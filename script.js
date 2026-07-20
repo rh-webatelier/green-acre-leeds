@@ -1,4 +1,4 @@
-// Green Acre Tree & Landscaping — nav toggle, sticky header, scroll reveal
+// Green Acre Tree David Langhan & Sons Roofing Landscaping — nav toggle, sticky header, scroll reveal
 (function () {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('primary-nav');
@@ -40,6 +40,12 @@
       { threshold: 0.12 }
     );
     revealEls.forEach((el) => observer.observe(el));
+    // Above-the-fold hero content should never sit hidden waiting on the observer
+    document.querySelectorAll('.hero .reveal').forEach((el) => el.classList.add('is-visible'));
+    // Safety net: if anything is still hidden shortly after load, reveal it
+    window.addEventListener('load', () => {
+      setTimeout(() => revealEls.forEach((el) => el.classList.add('is-visible')), 1200);
+    });
   } else {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
