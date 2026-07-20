@@ -300,31 +300,49 @@
           <p class="section__eyebrow" style="color:#a7d68a;">Get In Touch</p>
           <h2>Ready for a Free, No-Obligation Quote?</h2>
           <p class="contact__lead">
-            Green Acre doesn't list a public phone or email — the quickest way to reach Sonny is through
-            one of the verified profiles below.
+            Fill in the form with a few details and Sonny will get back to you — or reach Green Acre
+            through one of the verified profiles below.
           </p>
+          <div class="contact__channels">
+            <a class="channel" href="https://www.checkatrade.com/trades/greenacre" target="_blank" rel="noopener">
+              <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span class="channel__text"><strong>Checkatrade</strong><span>9.9/10 · Request a quote</span></span>
+              <span class="channel__go">→</span>
+            </a>
+            <a class="channel" href="https://www.mybuilder.com/profile/green_acre_tree_and_landscaping" target="_blank" rel="noopener">
+              <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/></svg></span>
+              <span class="channel__text"><strong>MyBuilder</strong><span>Reviewed profile · message Sonny</span></span>
+              <span class="channel__go">→</span>
+            </a>
+            <a class="channel" href="https://www.yell.com/biz/green-acre-tree-services-leeds-9761157/" target="_blank" rel="noopener">
+              <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <span class="channel__text"><strong>Yell</strong><span>Contact details &amp; reviews</span></span>
+              <span class="channel__go">→</span>
+            </a>
+          </div>
           <p class="note">
             Built as a free, ready-to-launch sample for Green Acre — it can go live on your own domain,
             with your branding and any changes you'd like, whenever you're ready.
           </p>
         </div>
-        <div class="contact__channels reveal">
-          <a class="channel" href="https://www.checkatrade.com/trades/greenacre" target="_blank" rel="noopener">
-            <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <span class="channel__text"><strong>Checkatrade</strong><span>9.9/10 · Request a quote</span></span>
-            <span class="channel__go">→</span>
-          </a>
-          <a class="channel" href="https://www.mybuilder.com/profile/green_acre_tree_and_landscaping" target="_blank" rel="noopener">
-            <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/></svg></span>
-            <span class="channel__text"><strong>MyBuilder</strong><span>Reviewed profile · message Sonny</span></span>
-            <span class="channel__go">→</span>
-          </a>
-          <a class="channel" href="https://www.yell.com/biz/green-acre-tree-services-leeds-9761157/" target="_blank" rel="noopener">
-            <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-            <span class="channel__text"><strong>Yell</strong><span>Contact details &amp; reviews</span></span>
-            <span class="channel__go">→</span>
-          </a>
-        </div>
+        <form class="quote-form reveal" action="https://formsubmit.co/romahala1939@gmail.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New quote request — Green Acre sample site" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="field-row">
+            <label class="field"><span>Your name</span><input type="text" name="Name" required placeholder="Jane Smith" /></label>
+            <label class="field"><span>Phone</span><input type="tel" name="Phone" placeholder="07…" /></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Email</span><input type="email" name="Email" placeholder="you@email.com" /></label>
+            <label class="field"><span>Postcode</span><input type="text" name="Postcode" placeholder="LS1" /></label>
+          </div>
+          <label class="field"><span>What do you need doing?</span><textarea name="Message" rows="4" required placeholder="Tell us about your garden or the job…"></textarea></label>
+          <label class="field field--file"><span>Add photos of your garden (optional)</span><input type="file" name="attachment" accept="image/*" multiple /></label>
+          <button type="submit" class="btn btn--primary btn--lg">Send Quote Request</button>
+          <p class="quote-form__small">No obligation — Sonny will get back to you to arrange a look at the job.</p>
+        </form>
       </div>
     </section>
 

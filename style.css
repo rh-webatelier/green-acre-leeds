@@ -198,6 +198,21 @@ ul { margin: 0; padding: 0; list-style: none; }
 .channel__go { margin-left: auto; font-size: 1.3rem; color: var(--leaf-soft); }
 .note { font-size: .82rem; color: var(--muted-dark); margin-top: 20px; border-left: 2px solid rgba(90,162,58,.55); padding-left: 14px; }
 
+/* ---------- quote form ---------- */
+.quote-form { align-self: stretch; background: rgba(255,255,255,.05); border: 1px solid var(--line-dark); border-radius: var(--radius); padding: 28px; display: grid; gap: 15px; align-content: start; }
+.field { display: grid; gap: 6px; }
+.field > span { font-family: var(--font-head); font-weight: 600; font-size: .85rem; color: rgba(255,255,255,.9); }
+.field input, .field textarea { width: 100%; font: inherit; color: #fff; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 12px 14px; }
+.field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,.4); }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--leaf); background: rgba(255,255,255,.12); }
+.field textarea { resize: vertical; }
+.field-row { display: grid; gap: 15px; }
+@media (min-width:600px){ .field-row{ grid-template-columns: 1fr 1fr; } }
+.field--file input { padding: 9px 10px; color: rgba(255,255,255,.72); font-size: .9rem; }
+.field--file input::file-selector-button { font: inherit; font-weight: 600; margin-right: 12px; padding: 8px 14px; border-radius: 8px; border: 0; background: var(--leaf); color: #fff; cursor: pointer; }
+.quote-form button { margin-top: 4px; width: 100%; }
+.quote-form__small { font-size: .8rem; color: rgba(255,255,255,.6); margin: 0; text-align: center; }
+
 /* ---------- footer ---------- */
 .site-footer { background: var(--forest-900); color: var(--muted-dark); padding: 30px 0; }
 .site-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: .84rem; }
