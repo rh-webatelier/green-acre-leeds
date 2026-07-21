@@ -50,3 +50,31 @@
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 })();
+
+// Gallery "See more / Show less" expander — progressive enhancement, ignores galleries without overflow
+(function () {
+  document.querySelectorAll('[data-gallery-toggle]').forEach(function (btn) {
+    var block = btn.closest('.gallery-block');
+    if (!block) return;
+    var wrap = block.querySelector('[data-gallery-more]');
+    if (!wrap) return;
+    block.classList.add('is-collapsed');
+    btn.hidden = false;
+    var items = wrap.querySelectorAll('.gallery__item');
+    items.forEach(function (el) { el.classList.add('reveal'); });
+    var MORE = btn.getAttribute('data-label-more') || 'See more photos';
+    var LESS = btn.getAttribute('data-label-less') || 'Show fewer photos';
+    btn.addEventListener('click', function () {
+      var collapsed = block.classList.toggle('is-collapsed');
+      btn.setAttribute('aria-expanded', String(!collapsed));
+      btn.textContent = collapsed ? MORE : LESS;
+      if (!collapsed) {
+        items.forEach(function (el, i) { el.style.transitionDelay = (i * 55) + 'ms'; el.classList.add('is-visible'); });
+      } else {
+        items.forEach(function (el) { el.classList.remove('is-visible'); el.style.transitionDelay = ''; });
+        btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        btn.focus();
+      }
+    });
+  });
+})();

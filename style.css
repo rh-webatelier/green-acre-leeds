@@ -228,3 +228,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* faq__intro sticky disabled on mobile — avoids overlap on phones */
 @media (max-width:899px){ .faq__intro{ position: static; top: auto; } }
+
+/* ---------- gallery: show-more expander ---------- */
+.gallery__more { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .5s ease; }
+.gallery__more-inner { min-height: 0; overflow: hidden; display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; padding-top: 16px; }
+@media (min-width:820px){ .gallery__more-inner{ grid-template-columns: repeat(3,1fr); grid-auto-rows: 240px; } }
+.gallery-block.is-collapsed .gallery__more { grid-template-rows: 0fr; }
+.gallery__actions { display: flex; justify-content: center; margin-top: 22px; }
+.gallery__more-inner .gallery__item.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.gallery__more-inner .gallery__item.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce){ .gallery__more{ transition:none; } .gallery__more-inner .gallery__item.reveal{ transition:none; } }
