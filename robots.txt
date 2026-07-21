@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rh-webatelier.github.io/green-acre-leeds/sitemap.xml
