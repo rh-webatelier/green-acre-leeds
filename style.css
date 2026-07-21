@@ -225,3 +225,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- reveal ---------- */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
+
+/* faq__intro sticky disabled on mobile — avoids overlap on phones */
+@media (max-width:899px){ .faq__intro{ position: static; top: auto; } }
